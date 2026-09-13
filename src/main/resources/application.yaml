@@ -1,0 +1,19 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/product_db
+    username: admin
+    password: admin123
+
+  jpa:
+    hibernate:
+      ddl-auto: validate   # Flyway creates tables, JPA only checks them
+    show-sql: true          # Print SQL to console (for learning)
+    properties:
+      hibernate:
+        format_sql: true    # Pretty-print SQL
+
+app:
+  welcome-message: "Welcome to the Product API"
